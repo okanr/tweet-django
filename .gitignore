@@ -1,0 +1,10 @@
+.DS_Store
+.Python
+.idea/
+bin/
+include/
+lib/
+pip-selfcheck.json
+db.sqlite3
+*.pyc
+static-serve/admin/
