@@ -1,15 +1,7 @@
-FROM python:3
-
-WORKDIR /usr/src/app
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-RUN ./src/manage.py makemigrations
-RUN ./src/manage.py migrate
-
-EXPOSE 8000
-
-CMD [ "python", "./src/manage.py", "runserver", "0.0.0.0:8000"]
+FROM python:3.6
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /config
+ADD /config/requirements.txt /config/
+RUN pip install -r /config/requirements.txt
+RUN mkdir /src;
+WORKDIR /src

@@ -8,3 +8,4 @@ pip-selfcheck.json
 db.sqlite3
 *.pyc
 static-serve/admin/
+src/tweets/migrations

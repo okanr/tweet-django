@@ -25,7 +25,7 @@ SECRET_KEY = 'g*u#16cng6^p7#6hu(p+l7tn&mq^xlga0)t!)d4-0h3@-!1a2('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', 'web']
 
 # Application definition
 
@@ -74,8 +74,11 @@ WSGI_APPLICATION = 'tweetme.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
