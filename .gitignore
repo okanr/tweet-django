@@ -9,3 +9,6 @@ db.sqlite3
 *.pyc
 static-serve/admin/
 src/tweets/migrations
+src/tweetme/settings/base.py
+src/tweetme/settings/local.py
+src/tweetme/settings/production.py
