@@ -17,6 +17,7 @@ services:
     depends_on:
       - db
     volumes:
+      - ./config:/config
       - ./src:/src
       - ./static-serve:/static-serve
     expose:

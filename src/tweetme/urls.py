@@ -23,9 +23,13 @@ from .views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('^$', home, name='Home'),
-    re_path('^tweet/', include('tweets.urls')),
+    re_path('^tweet/', include(('tweets.urls', 'tweets'), namespace='tweet')),
 ]
 
 if settings.DEBUG:
+    import debug_toolbar
     urlpatterns += (
         static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
+    urlpatterns += [
+        re_path(r'^__debug__/', include(debug_toolbar.urls)),
+    ]

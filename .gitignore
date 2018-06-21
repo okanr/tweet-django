@@ -12,3 +12,4 @@ src/tweets/migrations
 src/tweetme/settings/base.py
 src/tweetme/settings/local.py
 src/tweetme/settings/production.py
+static-serve/debug_toolbar/
