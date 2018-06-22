@@ -22,7 +22,7 @@ from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('^$', home, name='Home'),
+    re_path('^$', home, name='home'),
     re_path('^tweet/', include(('tweets.urls', 'tweets'), namespace='tweet')),
 ]
 
